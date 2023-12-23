@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import logo from '../collegezio.jpeg'
-import { Facebook, Instagram, Twitter } from "@mui/icons-material";
+import { Instagram, LinkedIn, Telegram } from "@mui/icons-material";
 import { Box } from "@mui/material";
 
 export default function Footer() {
@@ -47,18 +47,22 @@ export default function Footer() {
             <Typography variant="h6" className="font-gradient1" color="white">
               Follow Us
             </Typography>
-            <Link href="https://www.facebook.com/" color="inherit">
+            {/* <Link href="https://www.facebook.com/" color="inherit">
               <Facebook />
-            </Link>
+            </Link> */}
             <Link
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/college_zio/"
+              target="_blank"
               color="inherit"
               sx={{ pl: 1, pr: 1 }}
             >
               <Instagram />
             </Link>
-            <Link href="https://www.twitter.com/" color="inherit">
-              <Twitter />
+            <Link href="https://www.linkedin.com/company/collegezio" target="_blank" color="inherit">
+              <LinkedIn />
+            </Link>
+            <Link href="https://t.me/+51rtpGPVFcQyMWFl" target="_blank" color="inherit">
+              <Telegram />
             </Link>
           </Grid>
         </Grid>

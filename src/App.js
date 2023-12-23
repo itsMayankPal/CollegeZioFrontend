@@ -1,16 +1,16 @@
 
 import './App.css';
 
-
-import Notes from './components/Notes';
-import Quantum from './components/Quantum';
-import User from './components/User';
+import AKTU from './components/AKTU-BTECH/AKTUComponent';
+import CCSU from './components/CCSU-BCA/CCSUComponent'
+// import User from './components/User';
 
 
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import Home from './components/Home';
 import Main from './components/Main';
-import NewQuantum from './components/NewQuantum';
+import DeveloperCard from './components/DeveloperCard';
+// import NewQuantum from './components/NewQuantum';
 
 
 
@@ -25,8 +25,8 @@ const router = createBrowserRouter([
       },
     
     {
-      path: "notes",
-      element: <Notes />,
+      path: "AKTU",
+      element: <AKTU />,
 
     },
     {
@@ -34,16 +34,12 @@ const router = createBrowserRouter([
       element: <Main/>
     },
     {
-      path:'/Quantum',
-      element:<Quantum></Quantum>
+      path:'/CCSU',
+      element:<CCSU></CCSU>
     },
     {
-      path:'/NewQuantum',
-      element:<NewQuantum></NewQuantum>
-    },
-    {
-        path: '/User',
-          element: <User/>
+        path: '/Developers',
+          element: <DeveloperCard/>
         },
   ]
   }

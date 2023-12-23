@@ -42,3 +42,4 @@ For any inquiries or feedback, please reach out to us at [contact@collegezio.com
 This project is licensed under the [MIT License](LICENSE).
 
 © 2023 CollegeZio. All rights reserved.
+# CollegeZioFrontend

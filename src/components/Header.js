@@ -1,95 +1,85 @@
 import React from 'react'
 import logo from '../collegezio.jpeg';
 import{Link} from 'react-router-dom'
-import { Button } from '@mui/material';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import HomeIcon from '@mui/icons-material/Home';
+// import DropdownMenu from './DropdownMenu';
+import {
+  Button,
+} from '@mui/material';
 import EngineeringIcon from '@mui/icons-material/Engineering';
-// import Signin from './Sign_in';
-// import "https://fonts.googleapis.com/icon?family=Material+Icons"
+import SchoolIcon from '@mui/icons-material/School';
+
 
 function Header() {
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl();
-  };
+  // const [anchorEl, setAnchorEl] = React.useState(null);
+  // const open = Boolean(anchorEl);
+  // const handleClick = (event) => {
+  //   setAnchorEl(event.currentTarget);
+  // };
+  // const handleClose = () => {
+  //   setAnchorEl();
+  // };
 
   return (
-    <div> 
+   <div className=''>
       <nav className="navbar navbar-expand-lg bg-col">
-    <div className="container-fluid">
-     <Link className="navbar-brand mx-5"to={'/'}><img src={logo} className="App-logo" alt="logo" /></Link>
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon bgmenu"></span>
-      </button>
+        <div className="container-fluid">
+          <Link className="navbar-brand mx-5" to={'/'}>
+            <img src={logo} className="App-logo" alt="logo" />
+          </Link>
 
-      <div className="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-        <ul className="nav d-flex mt-2 justify-content-center">
-          <div className="nav-item mx-3">
-          <Link className="nav-link text-light active" to={'/Home'}><Button variant="outlined" startIcon={<HomeIcon />} size="large" >Home</Button></Link>
-          </div>
-          {/* <li className="nav-item">
-              <Link className="nav-link text-light d-none active" to= {'Notes'}>Notes</Link>
-          </li> */}
-          <li className="nav-item">
-            <Link className="nav-link text-light active" to = {'Quantum'}><Button variant="outlined" startIcon={<EngineeringIcon/>} size="large" color="success" >Quantums</Button></Link>
-          </li>
-          {/* <li className="nav-item mx-3">
-          <Link className="nav-link text-light active" to= {'Btech'}><Button variant="outlined" startIcon={<EngineeringIcon/>} size="large" color="success" >B.Tech</Button></Link>
-          </li> */}
           <Button
-        id="demo-positioned-button"
-        aria-controls={open ? 'demo-positioned-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-        variant="outlined"
-      >
-        Dashboard
-      </Button>
-      
-      <Menu
-        id="demo-positioned-menu"
-        aria-labelledby="demo-positioned-button"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        anchorOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
-        }}
-      >
-        <MenuItem onClick={handleClose}><Link to={'SignIn'}>Profile</Link></MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}><Link to={'SignUp'}>Sign Up</Link></MenuItem>
-      </Menu>
- 
-          <li className="nav-item">
-            <Link className="nav-link text-light d-none active" id='myDIV' to = {'SignIn'}>Sign-in</Link>
-          </li>
-          {/* <li className="nav-item">
-            <Link className="nav-link text-light d-none active" to = {'SignUp'}>Sign-Up</Link>
-          </li> */}
-        </ul>
-      </div>
-    </div>
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="text-center">MENU</span>
+          </Button>
+
+          <div className="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul className="navbar-nav d-flex mt-2 justify-content-center">
+              <li className="nav-item mx-3">
+                <Link className="nav-link text-light" to={'AKTU'}>
+                  <Button variant="outlined" startIcon={<EngineeringIcon />} size="large" color="success">
+                    AKTU
+                  </Button>
+                </Link>
+              </li>
+              <li className="nav-item mx-3">
+                <Link className="nav-link text-light" to={'CCSU'}>
+                  <Button variant="outlined" startIcon={<SchoolIcon />} size="large" color="success">
+                    CCSU
+                  </Button>
+                </Link>
+              </li>
+              <li className="nav-item mx-3">
+                <Link className="nav-link text-light" to={'Developers'}>
+                  <Button variant="outlined" size="large" color="success">
+                    Developers
+                  </Button>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
-      
-      
-      
-      
-      
-      </div>
+
+      {/* <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+        <List>
+          {menuItems.map((item) => (
+            <ListItem button key={item.label} component={Link} to={item.to}>
+              <Button startIcon={item.icon} color="success">
+                {item.label}
+              </Button>
+            </ListItem>
+          ))}
+        </List>
+      </Drawer> */}
+    </div>
   )
 }
 
