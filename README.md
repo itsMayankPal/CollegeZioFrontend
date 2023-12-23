@@ -18,7 +18,7 @@ CollegeZio is a web application dedicated to providing free educational resource
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/itsMayankPal/collegezio.git`
+1. Clone the repository: `git clone https://github.com/itsMayankPal/CollegeZioFrontend.git`
 2. Navigate to the project directory: `cd collegezio`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`
