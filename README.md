@@ -1,6 +1,6 @@
 # CollegeZio - Your Ultimate Student Resource Hub
 
-![CollegeZio Logo](./client/src/collegezio.jpeg)
+![CollegeZio Logo]([./client/src/collegezio.jpeg](https://github.com/itsMayankPal/CollegeZioFrontend/blob/main/src/collegezio.jpeg?raw=true))
 
 ## About CollegeZio
 
